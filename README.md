@@ -1,2 +1,3 @@
-# Template
-A .Net core peoject template 
+# YS.Time
+
+![build](https://github.com/yscorecore/ys.time/workflows/build/badge.svg)
