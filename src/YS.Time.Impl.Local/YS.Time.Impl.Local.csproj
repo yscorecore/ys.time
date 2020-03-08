@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\YS.Time.Core\YS.Time.Core.csproj" />
+    <ProjectReference Include="..\YS.Time.Core\YS.Time.Core.csproj" />
   </ItemGroup>
 
 </Project>
