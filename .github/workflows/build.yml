@@ -15,17 +15,17 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: 03 Build with dotnet
+    - name: 03 Set Dotnet Tools Path
+      run: echo "::set-env name=PATH::${PATH}:${HOME}/.dotnet/tools"
+    - name: 04 Check Code Format
+      run: dotnet tool install -g dotnet-format && dotnet format --dry-run --check
+    - name: 05 Build with dotnet
       run: dotnet build
-    - name: 04 Run Unit test
-      run: dotnet test /p:CollectCoverage=true  /p:CoverletOutput='../../'  /p:CoverletOutputFormat=cobertura
-    - name: 05 Combin All Test Report 
-      uses: danielpalme/ReportGenerator-GitHub-Action@v4.5.0
-      with:
-        reports: test/*/coverage.cobertura.xml
-        targetdir: .
-        reporttypes: Cobertura
-    - name: 06 Upload coverage to Codecov  
+    - name: 06 Run Unit test
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+    - name: 07 Combin All Test Report
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool && reportgenerator  -reports:test/*/coverage.cobertura.xml -reporttype:cobertura -targetdir:.
+    - name: 08 Upload coverage to Codecov  
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
