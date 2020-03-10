@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
+
 namespace YS.Time
 {
     public interface ITimeService
     {
-        DateTimeOffset Now();
+        Task<DateTimeOffset> Current();
     }
 }
