@@ -19,7 +19,13 @@ jobs:
       run: dotnet build
     - name: 04 Run Unit test
       run: dotnet test /p:CollectCoverage=true  /p:CoverletOutput='../../'  /p:CoverletOutputFormat=cobertura
-    - name: 05 Upload coverage to Codecov  
+    - name: 05 Combin All Test Report 
+      uses: danielpalme/ReportGenerator-GitHub-Action@v4.5.0
+      with:
+        reports: test/*/coverage.cobertura.xml
+        targetdir: .
+        reporttypes: Cobertura
+    - name: 06 Upload coverage to Codecov  
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
