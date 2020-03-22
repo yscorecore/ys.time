@@ -2,7 +2,7 @@
 namespace YS.Time.Impl.Local
 {
     [TestClass]
-    public class LocalTimeServiceTest:TimeServiceTest
+    public class LocalTimeServiceTest : TimeServiceTest
     {
 
     }

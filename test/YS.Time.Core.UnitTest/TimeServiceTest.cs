@@ -16,10 +16,10 @@ namespace YS.Time
             var current = await timeSerivce.Current();
             Console.WriteLine(current);
             var timespan = DateTimeOffset.Now - current;
-            Assert.IsTrue(timespan.TotalMilliseconds <5000);
+            Assert.IsTrue(timespan.TotalMilliseconds < 5000);
             var current2 = await timeSerivce.Current();
-            Console.WriteLine(current2-current);
-            Assert.IsTrue((current2-current).TotalMilliseconds < 2000);
+            Console.WriteLine(current2 - current);
+            Assert.IsTrue((current2 - current).TotalMilliseconds < 2000);
         }
     }
 }
