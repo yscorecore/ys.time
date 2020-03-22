@@ -4,19 +4,28 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
-
-    <RootNamespace>YS.Time.Impl.Local</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="docker-compose.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="docker-compose.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
+    <PackageReference Include="YS.Knife.Test" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\YS.Time.Impl.Local\YS.Time.Impl.Local.csproj" />
+    <ProjectReference Include="..\..\src\YS.Time.Impl.Redis\YS.Time.Impl.Redis.csproj" />
     <ProjectReference Include="..\YS.Time.Core.UnitTest\YS.Time.Core.UnitTest.csproj" />
   </ItemGroup>
 
