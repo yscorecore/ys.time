@@ -3,7 +3,7 @@ using YS.Knife;
 
 namespace YS.Time.Impl.Redis
 {
-    [OptionsClass()]
+    [Options]
     public class RedisOptions
     {
         public string ConnectionString { get; set; } = "localhost";

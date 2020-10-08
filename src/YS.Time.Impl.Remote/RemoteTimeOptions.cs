@@ -3,7 +3,7 @@ using YS.Knife;
 
 namespace YS.Time
 {
-    [OptionsClass]
+    [Options]
     public class RemoteTimeOptions
     {
         [Range(1, int.MaxValue)]

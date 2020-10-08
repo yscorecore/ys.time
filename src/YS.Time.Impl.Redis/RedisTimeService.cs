@@ -7,7 +7,7 @@ using YS.Knife;
 
 namespace YS.Time.Impl.Redis
 {
-    [ServiceClass]
+    [Service]
     public class RedisTimeService : RemoteTimeServiceBase
     {
         public RedisTimeService(IOptions<RemoteTimeOptions> remoteOptions, IOptions<RedisOptions> redisOptions, ILogger<RedisTimeService> logger) : base(remoteOptions)

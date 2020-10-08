@@ -5,7 +5,7 @@ using YS.Knife;
 
 namespace YS.Time.Impl.Local
 {
-    [ServiceClass(Lifetime = ServiceLifetime.Singleton)]
+    [Service(Lifetime = ServiceLifetime.Singleton)]
     public class LocalTimeService : ITimeService
     {
         public Task<DateTimeOffset> Current() => Task.FromResult(DateTimeOffset.Now);
