@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\YS.Time.Impl.Remote\YS.Time.Impl.Remote.csproj" />
+    <ProjectReference Include="..\YS.Time.Core\YS.Time.Core.csproj" />
   </ItemGroup>
 
 
