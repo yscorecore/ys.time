@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YS.Time.Impl.Redis", "src\Y
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YS.Time.Impl.Redis.UnitTest", "test\YS.Time.Impl.Redis.UnitTest\YS.Time.Impl.Redis.UnitTest.csproj", "{FEF46171-4946-4C6C-A6F7-F8B48504DFBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YS.Time.Impl.MySql.UnitTest", "test\YS.Time.Impl.MySql.UnitTest\YS.Time.Impl.MySql.UnitTest.csproj", "{EBD0A745-C2CD-42E6-BA64-76345BEE0135}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YS.Time.Impl.MySql", "src\YS.Time.Impl.MySql\YS.Time.Impl.MySql.csproj", "{087EC5AD-F663-48C9-9C45-186814E251E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{FEF46171-4946-4C6C-A6F7-F8B48504DFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF46171-4946-4C6C-A6F7-F8B48504DFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF46171-4946-4C6C-A6F7-F8B48504DFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD0A745-C2CD-42E6-BA64-76345BEE0135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD0A745-C2CD-42E6-BA64-76345BEE0135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD0A745-C2CD-42E6-BA64-76345BEE0135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD0A745-C2CD-42E6-BA64-76345BEE0135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{087EC5AD-F663-48C9-9C45-186814E251E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087EC5AD-F663-48C9-9C45-186814E251E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087EC5AD-F663-48C9-9C45-186814E251E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087EC5AD-F663-48C9-9C45-186814E251E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{FFC9456F-35D0-420B-93E9-8FB938A01D67} = {8C3819DF-CF9C-4BA5-986F-F14150462069}
 		{45FC2E7F-6F06-4359-BC66-62A37F805816} = {62ABDAE0-D6DA-4042-AA76-04472C50CF96}
 		{FEF46171-4946-4C6C-A6F7-F8B48504DFBC} = {8C3819DF-CF9C-4BA5-986F-F14150462069}
+		{EBD0A745-C2CD-42E6-BA64-76345BEE0135} = {8C3819DF-CF9C-4BA5-986F-F14150462069}
+		{087EC5AD-F663-48C9-9C45-186814E251E4} = {62ABDAE0-D6DA-4042-AA76-04472C50CF96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB11BB21-3F5D-42D6-8737-F19C0666F1F8}

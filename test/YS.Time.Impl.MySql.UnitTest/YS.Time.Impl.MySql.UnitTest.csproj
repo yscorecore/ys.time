@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\YS.Time.Impl.MySql\YS.Time.Impl.MySql.csproj" />
+    <ProjectReference Include="..\YS.Time.Core.UnitTest\YS.Time.Core.UnitTest.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

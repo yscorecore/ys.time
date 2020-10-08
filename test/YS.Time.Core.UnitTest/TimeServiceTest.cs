@@ -12,12 +12,12 @@ namespace YS.Time
         [TestMethod]
         public async Task ShouldReturnExpectedTimeWhenGetCurrent()
         {
-            var timeSerivce = this.GetService<ITimeService>();
-            var current = await timeSerivce.Current();
+            var timeService = this.GetService<ITimeService>();
+            var current = await timeService.Current();
             Console.WriteLine(current);
             var timespan = DateTimeOffset.Now - current;
             Assert.IsTrue(timespan.TotalMilliseconds < 5000);
-            var current2 = await timeSerivce.Current();
+            var current2 = await timeService.Current();
             Console.WriteLine(current2 - current);
             Assert.IsTrue((current2 - current).TotalMilliseconds < 2000);
         }
