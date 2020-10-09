@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <ProjectReference Include="..\YS.Time.Core\YS.Time.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="YS.Knife.EntityFrameworkCore.SqlServer" Version="1.3.2" />
+    </ItemGroup>
+
+</Project>
