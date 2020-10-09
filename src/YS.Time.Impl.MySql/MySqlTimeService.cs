@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 namespace YS.Time.Impl.MySql
@@ -15,7 +16,8 @@ namespace YS.Time.Impl.MySql
 
         protected override Task<DateTimeOffset> OnGetRemoteTime()
         {
-            return Task.FromResult(DateTimeOffset.Now);
+            long timeStamp = (long)this.timeContext.Database.ExecuteSqlAsScalar("select unix_timestamp(now())");
+            return Task.FromResult(DateTimeOffset.FromUnixTimeSeconds(timeStamp));
         }
     }
 }
