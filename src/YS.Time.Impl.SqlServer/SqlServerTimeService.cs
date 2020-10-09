@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 namespace YS.Time.Impl.SqlServer
 {
     [YS.Knife.Service(typeof(ITimeService), ServiceLifetime.Singleton)]
-    public class SqlServerTimeService:RemoteTimeServiceBase
+    public class SqlServerTimeService : RemoteTimeServiceBase
     {
         private readonly TimeContext timeContext;
         public SqlServerTimeService(IOptions<RemoteTimeOptions> remoteOptions, TimeContext timeContext) : base(remoteOptions)
