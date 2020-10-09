@@ -20,7 +20,7 @@ namespace YS.Time
             if (localNow - lastLocalTime > cacheTime)
             {
                 lastRemoteTime = await OnGetRemoteTime();
-                lastLocalTime = localNow;
+                lastLocalTime = DateTimeOffset.Now;
             }
             return lastRemoteTime + (localNow - lastLocalTime);
         }
