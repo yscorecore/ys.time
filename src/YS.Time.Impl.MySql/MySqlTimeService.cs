@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Data.Common;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
+
 namespace YS.Time.Impl.MySql
 {
     [YS.Knife.Service(typeof(ITimeService), ServiceLifetime.Singleton)]
