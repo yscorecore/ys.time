@@ -4,6 +4,6 @@
         <RootNamespace>YS.Time</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="YS.Knife.Core" Version="1.3.2" />
+        <PackageReference Include="YS.Knife.Core" Version="2.0.0" />
     </ItemGroup>
 </Project>
